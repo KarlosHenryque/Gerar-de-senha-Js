@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(50, 213, 250);
+  --primary-color-darker: rgb(9, 48, 56);
+  --secondary-color: #fff;
+  --input-bg: #f4f4f4;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: var(--primary-color);
+  font-size: 1.2em;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.senha-gerada {
+  font-size: 1.6em;
+  color: var(--primary-color);
+  background: var(--input-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin: 20px 0;
+  word-break: break-all;
+}
+
+label {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+input[type="number"], input[type="checkbox"] {
+  margin: 10px 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background: var(--input-bg);
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: var(--primary-color-darker);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+  .container {
+    padding: 15px;
+  }
+}
